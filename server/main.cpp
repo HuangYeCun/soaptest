@@ -14,6 +14,6 @@ int main(int argc, char** argv) {
 }
 
 int testService::test(std::string& result) {
-  result = "hello test";
+  result = "hello dong";
   return SOAP_OK;
 }
