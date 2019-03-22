@@ -6,6 +6,7 @@
 int main(int argc, char** argv) {
   testService calc;
   int port = 8090;
+  //  if (calc.bind(nullptr, 8090, 1)) {
   if (calc.run(port)) {
     std::cerr << "Calc service run failed" << std::endl;
     exit(0);
