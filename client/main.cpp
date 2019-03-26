@@ -7,6 +7,9 @@ int main(int argc, char **argv) {
   std::string result = "";
 
   testProxy calc;
+  soap_set_mode(&calc, SOAP_C_UTFSTRING);  //设置编码
+  calc.mode |= SOAP_C_UTFSTRING;
+
   calc.soap_endpoint = "http://localhost:8090";
   if (calc.test(result) == SOAP_OK) {
     std::cout << "result: " << result << std::endl;
